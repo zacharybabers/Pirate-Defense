@@ -393,6 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2805669394655449611}
   - component: {fileID: 382226891473739699}
+  - component: {fileID: 6853648292787666577}
   m_Layer: 0
   m_Name: QuadCube
   m_TagString: Untagged
@@ -432,7 +433,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a969144d0189bb4493c33674fbe8892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: 10
+--- !u!114 &6853648292787666577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3552960345940009694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832d212fb717ecf41a228e181fb84089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5593945597774082010
 GameObject:
   m_ObjectHideFlags: 0
