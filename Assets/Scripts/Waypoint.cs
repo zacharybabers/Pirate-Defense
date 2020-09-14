@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    
+    public bool isExplored = false; // ok as is a data class
     private Vector2Int gridPos;
     
     private const int gridSize = 10;
