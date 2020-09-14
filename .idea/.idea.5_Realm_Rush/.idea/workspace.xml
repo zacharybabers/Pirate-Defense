@@ -20,10 +20,10 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/EditorSnap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Block.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
       </list>
     </option>
   </component>
@@ -72,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599969217977</updated>
-      <workItem from="1599969221041" duration="16422000" />
+      <workItem from="1599969221041" duration="18902000" />
     </task>
     <servers />
   </component>

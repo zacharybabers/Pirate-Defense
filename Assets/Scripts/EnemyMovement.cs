@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    List<Waypoint> path;
-    void Start()
-    {
-        StartCoroutine(FollowPath());
-    }
 
-    private IEnumerator FollowPath()
+   void Start()
+   {
+    Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
+    var path = pathfinder.GetPath();
+    StartCoroutine(FollowPath(path));
+   }
+
+    private IEnumerator FollowPath(List<Waypoint> path)
     {
         print("Starting patrol...");
-        foreach (Waypoint waypoint in path)
+       foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            print("visiting " + waypoint);
             yield return new WaitForSeconds(1f);
-        }
-        print("Ending Patrol");
+       }
+       print("Ending Patrol");
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

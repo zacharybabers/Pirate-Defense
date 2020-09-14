@@ -9,7 +9,9 @@ public class Pathfinder : MonoBehaviour
     
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     private Queue<Waypoint> queue = new Queue<Waypoint>();
-    [SerializeField] private bool isRunning = true; //todo make private
+    private bool isRunning = true;
+    private Waypoint searchCenter;
+    public List<Waypoint> path = new List<Waypoint>();
 
     private Vector2Int[] directions =
     {
@@ -19,24 +21,41 @@ public class Pathfinder : MonoBehaviour
         Vector2Int.left
     };
 
-        void Start()
+    public List<Waypoint> GetPath()
         {
             LoadBlocks();
             ColorStartAndEnd();
-            Pathfind();
+            BreadthFirstSearch();
+            CreatePath();
+            return path;
+        }
+        
+        private void CreatePath()
+        {
+            path.Add(endWaypoint);
+
+            Waypoint previous = endWaypoint.exploredFrom;
+            while (previous != startWaypoint)
+            {
+                path.Add(previous);
+                previous = previous.exploredFrom;
+
+            }
+            
+            path.Add(startWaypoint);
+            path.Reverse();
         }
 
-        private void Pathfind()
+        private void BreadthFirstSearch()
         {
             queue.Enqueue(startWaypoint);
 
             while (queue.Count > 0 && isRunning)
             {
-                var searchCenter = queue.Dequeue();
-                searchCenter.isExplored = true;
-                print("Searching from " + searchCenter); // todo remove log
+                searchCenter = queue.Dequeue();
                 HaltIfEndFound(searchCenter);
-                ExploreNeighbours(searchCenter);
+                ExploreNeighbours();
+                searchCenter.isExplored = true;
             }
             print("Finished pathfinding?");
         }
@@ -46,24 +65,19 @@ public class Pathfinder : MonoBehaviour
         {
             if (searchCenter == endWaypoint)
             {
-                print("Searching from end node, therefore stopping"); // todo remove log 
                 isRunning = false;
             }
         }
-        private void ExploreNeighbours(Waypoint from)
+        private void ExploreNeighbours()
         {
             if (!isRunning) { return; }
             
             foreach (Vector2Int direction in directions)
             {
-                Vector2Int neighbourCoordinates = from.GetGridPos() + direction;
-                try
+                Vector2Int neighbourCoordinates = searchCenter.GetGridPos() + direction;
+                if (grid.ContainsKey(neighbourCoordinates))
                 {
                     QueueNewNeighbours(neighbourCoordinates);
-                }
-                catch
-                {
-                    //do nothing
                 }
             }
         }
@@ -71,15 +85,14 @@ public class Pathfinder : MonoBehaviour
         private void QueueNewNeighbours(Vector2Int neighbourCoordinates)
         {
             Waypoint neighbour = grid[neighbourCoordinates];
-            if (neighbour.isExplored)
+            if (neighbour.isExplored || queue.Contains(neighbour))
             {
                 //do nothing
             }
             else
             {
-                grid[neighbourCoordinates].SetTopColor(Color.blue); // todo move later
-                queue.Enqueue(grid[neighbourCoordinates]);
-                print("Queueing " + neighbour);
+                queue.Enqueue(neighbour);
+                neighbour.exploredFrom = searchCenter;
             }
         }
 
@@ -105,10 +118,4 @@ public class Pathfinder : MonoBehaviour
                 }
             }
         }
-
-        // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
