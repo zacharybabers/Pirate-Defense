@@ -10,14 +10,17 @@ public class EnemySpawner : MonoBehaviour
     
     void Start()
     {
-        StartCoroutine(SpawnEnemy());
+        StartCoroutine(RepeatedlySpawnEnemies());
     }
 
 
-    private IEnumerator SpawnEnemy()
+    private IEnumerator RepeatedlySpawnEnemies()
     {
-        Instantiate(enemyPrefab);
-        yield return new WaitForSeconds(secondsBetweenSpawns);
+        while (true) // forever
+        {
+            Instantiate(enemyPrefab);
+            yield return new WaitForSeconds(secondsBetweenSpawns);
+        }
     }
    
 }
