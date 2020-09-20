@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -26,9 +27,8 @@ public class Waypoint : MonoBehaviour
         );
     }
 
-    public void SetTopColor(Color color)
+    private void OnMouseOver()
     {
-       MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-       topMeshRenderer.material.color = color;
+        print("mouse over " + gameObject.name);
     }
 }
