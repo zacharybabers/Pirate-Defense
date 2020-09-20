@@ -13,7 +13,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tower.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -22,8 +25,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Block.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
       </list>
     </option>
   </component>
@@ -42,6 +48,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -72,7 +79,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599969217977</updated>
-      <workItem from="1599969221041" duration="18902000" />
+      <workItem from="1599969221041" duration="20897000" />
+      <workItem from="1600501488699" duration="8322000" />
     </task>
     <servers />
   </component>
@@ -85,6 +93,14 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="782" y="208" key="SettingsEditor" timestamp="1600502050562">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="782" y="208" key="SettingsEditor/-1920.362.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600502050562" />
+    <state x="1569" y="68" width="999" height="979" key="dock-window-1" timestamp="1600569458857">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1569" y="68" width="999" height="979" key="dock-window-1/-1920.362.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1600569458857" />
     <state x="958" y="299" width="644" height="801" key="find.popup" timestamp="1599994452535">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
