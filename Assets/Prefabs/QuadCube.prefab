@@ -156,6 +156,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isExplored: 0
   exploredFrom: {fileID: 0}
+  isPlaceable: 1
+  tower: {fileID: 804373069565941554, guid: cefd052a898145448b286485fbb9d3df, type: 3}
+  towerHeight: 5
 --- !u!65 &2768395066261951009
 BoxCollider:
   m_ObjectHideFlags: 0
