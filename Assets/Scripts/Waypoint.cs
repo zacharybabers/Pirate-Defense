@@ -10,15 +10,13 @@ public class Waypoint : MonoBehaviour
     public bool isExplored = false;
     public Waypoint exploredFrom;
     public bool isPlaceable = true;
-    private bool hasTower;
+    public bool hasTower;
     
     private Vector2Int gridPos;
     
     private const int gridSize = 10;
 
-    [SerializeField] private Tower tower;
-    [SerializeField] private float towerHeight = 5f;
-    
+  
 
     public int GetGridSize()
     {
@@ -38,8 +36,7 @@ public class Waypoint : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             if (isPlaceable && hasTower == false)
             {
-                Instantiate(tower, new Vector3(transform.position.x, (transform.position.y + towerHeight), transform.position.z), Quaternion.identity);
-                hasTower = true;
+              FindObjectOfType<TowerFactory>().AddTower(this);
             }
             else
             {
