@@ -7,12 +7,33 @@
       <e p="5_Realm_Rush.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Packages" t="Include">
+          <e p="AllSkyFree" t="Include">
+            <e p="AllSkyFree_Menu.cs" t="Include" />
+            <e p="AllSkyFree_Readme.txt" t="Include" />
+          </e>
+          <e p="SimpleCumulus" t="Include">
+            <e p="Demo" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Player" t="Include">
+                  <e p="FPSWalkerEnhanced.cs" t="Include" />
+                  <e p="SmoothMouseLook.cs" t="Include" />
+                </e>
+                <e p="Skybox" t="Include">
+                  <e p="SkyboxChanger.cs" t="Include" />
+                  <e p="SkyboxRotator.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="CubeEditor.cs" t="Include" />
           <e p="EnemyDamage.cs" t="Include" />
           <e p="EnemyMovement.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="Pathfinder.cs" t="Include" />
+          <e p="PlayerHealth.cs" t="Include" />
           <e p="Tower.cs" t="Include" />
           <e p="TowerFactory.cs" t="Include" />
           <e p="Waypoint.cs" t="Include" />

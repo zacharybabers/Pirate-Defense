@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private int hitPoints = 10;
     [SerializeField] private ParticleSystem hitParticlePrefab;
     [SerializeField] private ParticleSystem deathParticlePrefab;
+
+   
 
     private void OnParticleCollision(GameObject other)
     {

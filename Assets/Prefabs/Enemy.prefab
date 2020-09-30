@@ -78,6 +78,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06206b6842d7d4d4b8dfbead58d249c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waypointWaitTime: 0.5
+  waypointMoveTime: 0.5
+  goalParticlePrefab: {fileID: 198537984209914932, guid: 55c2e652f9b720e4d95cf00166876dba,
+    type: 3}
 --- !u!1 &1646541640735296
 GameObject:
   m_ObjectHideFlags: 0
