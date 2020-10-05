@@ -30,10 +30,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TowerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
       </list>
     </option>
   </component>
@@ -86,7 +86,8 @@
       <workItem from="1599969221041" duration="20897000" />
       <workItem from="1600501488699" duration="15936000" />
       <workItem from="1600749097806" duration="5036000" />
-      <workItem from="1601173327596" duration="10470000" />
+      <workItem from="1601173327596" duration="12945000" />
+      <workItem from="1601865960292" duration="6565000" />
     </task>
     <servers />
   </component>

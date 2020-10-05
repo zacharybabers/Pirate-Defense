@@ -8,6 +8,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float waypointWaitTime = 1f;
     [SerializeField] private float waypointMoveTime = 1f;
     [SerializeField] private ParticleSystem goalParticlePrefab;
+   
+    
    void Start()
    {
     Pathfinder pathfinder = FindObjectOfType<Pathfinder>();

@@ -11,11 +11,14 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private EnemyMovement enemyPrefab;
     [SerializeField] private Transform enemyParentTransform;
     [SerializeField] private Text scoreText;
+    [SerializeField] private AudioClip spawnedEnemySFX;
     private int score = 0;
+    private AudioSource myAudioSource;
     
     void Start()
     {
         scoreText.text = "Score: " + score;
+        myAudioSource = GetComponent<AudioSource>();
         StartCoroutine(RepeatedlySpawnEnemies());
     }
 
@@ -24,12 +27,17 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true) // forever
         {
+            AddScore();
+            myAudioSource.PlayOneShot(spawnedEnemySFX);
             var newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             newEnemy.transform.parent = enemyParentTransform;
-            score++;
-            scoreText.text = "Score: " + score;            
             yield return new WaitForSeconds(secondsBetweenSpawns);
         }
     }
-   
+
+    private void AddScore()
+    {
+        score++;
+        scoreText.text = "Score: " + score;
+    }
 }
