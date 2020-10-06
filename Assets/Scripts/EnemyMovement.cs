@@ -8,11 +8,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float waypointWaitTime = 1f;
     [SerializeField] private float waypointMoveTime = 1f;
     [SerializeField] private ParticleSystem goalParticlePrefab;
+    
+    private Pathfinder currentPathfinder;
    
     
    void Start()
    {
-    Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
+    Pathfinder pathfinder = FindPathfinder();
     var path = pathfinder.GetPath();
     StartCoroutine(FollowPath(path));
    }
@@ -39,6 +41,28 @@ public class EnemyMovement : MonoBehaviour
         var vfx = Instantiate(goalParticlePrefab, transform.position + new Vector3(0, 10, 0), Quaternion.identity);
         vfx.Play();
         Destroy(gameObject, 0.1f);
+    }
+
+    private Pathfinder FindPathfinder()
+    {
+        var allPathfinders = FindObjectsOfType<Pathfinder>();
+        foreach (Pathfinder pathfinder in allPathfinders)
+        {
+            if (currentPathfinder == null)
+            {
+                currentPathfinder = pathfinder;
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, pathfinder.startWaypoint.transform.position) < Vector3.Distance(transform.position, currentPathfinder.startWaypoint.transform.position))
+                {
+                    currentPathfinder = pathfinder;
+                }
+            
+            }
+        }
+
+        return currentPathfinder;
     }
     
    

@@ -26,14 +26,15 @@
         <option value="$PROJECT_DIR$/Assets/EditorSnap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Block.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TowerFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ReferenceMe.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +88,8 @@
       <workItem from="1600501488699" duration="15936000" />
       <workItem from="1600749097806" duration="5036000" />
       <workItem from="1601173327596" duration="12945000" />
-      <workItem from="1601865960292" duration="6565000" />
+      <workItem from="1601865960292" duration="7392000" />
+      <workItem from="1601934211199" duration="4978000" />
     </task>
     <servers />
   </component>

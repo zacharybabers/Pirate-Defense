@@ -5,13 +5,13 @@ using UnityEngine;
 public class Pathfinder : MonoBehaviour
 {
     
-    [SerializeField] private Waypoint startWaypoint, endWaypoint;
+    public Waypoint startWaypoint, endWaypoint;
     
     Dictionary<Vector2Int, Waypoint> grid = new Dictionary<Vector2Int, Waypoint>();
     private Queue<Waypoint> queue = new Queue<Waypoint>();
     private bool isRunning = true;
     private Waypoint searchCenter;
-    public List<Waypoint> path = new List<Waypoint>();
+    private List<Waypoint> path = new List<Waypoint>();
 
     private Vector2Int[] directions =
     {
