@@ -13,10 +13,12 @@ public class EnemyDamage : MonoBehaviour
     [SerializeField] private AudioClip enemyDeathSFX;
     private AudioSource myAudioSource;
     private Camera mainCamera;
+    private GameStateManager gameState;
 
 
     private void Start()
     {
+        gameState = FindObjectOfType<GameStateManager>();
         myAudioSource = GetComponent<AudioSource>();
         mainCamera = Camera.main;
     }
@@ -48,6 +50,8 @@ public class EnemyDamage : MonoBehaviour
     void DestroyMe()
     {
         Destroy(gameObject);
+        gameState.currentWaveEnemiesLeft--;
+        gameState.UpdateEnemiesUI();
     }
 
     private void PlayDamageSound()

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-  [SerializeField] private int hitPoints = 10;
+  [SerializeField] public int hitPoints = 10;
   [SerializeField] private int healthDecrease = 1;
   [SerializeField] private Text healthText;
   [SerializeField] private AudioClip selfDestructSFX;
