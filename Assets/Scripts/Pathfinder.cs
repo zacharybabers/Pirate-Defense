@@ -117,6 +117,7 @@ public class Pathfinder : MonoBehaviour
         private void LoadBlocks()
         {
             var waypoints = FindObjectsOfType<Waypoint>();
+            waypoints = ClearWaypoints(waypoints);
             foreach (Waypoint waypoint in waypoints)
             {
                 var gridPos = waypoint.GetGridPos();
@@ -129,5 +130,16 @@ public class Pathfinder : MonoBehaviour
                     grid.Add(gridPos, waypoint);
                 }
             }
+        }
+
+        private Waypoint[] ClearWaypoints(Waypoint[] waypoints)
+        {
+            foreach (Waypoint waypoint in waypoints)
+            {
+                waypoint.exploredFrom = null;
+                waypoint.isExplored = false;
+            }
+
+            return waypoints;
         }
 }

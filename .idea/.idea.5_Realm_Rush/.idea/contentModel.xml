@@ -33,6 +33,7 @@
           <e p="EnemyMovement.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="Pathfinder.cs" t="Include" />
+          <e p="PathManager.cs" t="Include" />
           <e p="PlayerHealth.cs" t="Include" />
           <e p="Tower.cs" t="Include" />
           <e p="TowerFactory.cs" t="Include" />
