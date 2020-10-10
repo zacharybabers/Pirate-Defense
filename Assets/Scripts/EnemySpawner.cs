@@ -12,12 +12,10 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform enemyParentTransform;
     [SerializeField] private AudioClip spawnedEnemySFX;
     public float spawnFactor = 1;
-    private AudioSource myAudioSource;
-   
-    
+
+
     void Start()
     {
-        myAudioSource = GetComponent<AudioSource>();
         StartCoroutine(RepeatedlySpawnEnemies());
     }
 
@@ -26,7 +24,6 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true) // forever
         {
-            myAudioSource.PlayOneShot(spawnedEnemySFX);
             var newEnemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
             newEnemy.transform.parent = enemyParentTransform;
             yield return new WaitForSeconds(secondsBetweenSpawns / spawnFactor);

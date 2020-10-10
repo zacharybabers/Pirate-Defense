@@ -56,6 +56,6 @@ public class EnemyDamage : MonoBehaviour
 
     private void PlayDamageSound()
     {
-        myAudioSource.PlayOneShot(damageSFX);
+        myAudioSource.PlayOneShot(damageSFX, 0.5f);
     }
 }

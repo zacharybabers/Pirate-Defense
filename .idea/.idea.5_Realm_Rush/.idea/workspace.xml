@@ -28,19 +28,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Block.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CubeEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Waypoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TowerFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ReferenceMe.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PathCalculator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Pathfinder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawnManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameStateManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HighscoreSetter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
       </list>
     </option>
   </component>
@@ -97,6 +97,7 @@
       <workItem from="1601865960292" duration="7392000" />
       <workItem from="1601934211199" duration="6949000" />
       <workItem from="1602034262186" duration="10808000" />
+      <workItem from="1602217996477" duration="2717000" />
     </task>
     <servers />
   </component>
