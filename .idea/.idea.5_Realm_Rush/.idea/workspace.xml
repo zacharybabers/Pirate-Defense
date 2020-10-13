@@ -36,11 +36,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerHealth.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameStateManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HighscoreSetter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDamage.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStateManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/HighscoreSetter.cs" />
       </list>
     </option>
   </component>
@@ -97,7 +97,8 @@
       <workItem from="1601865960292" duration="7392000" />
       <workItem from="1601934211199" duration="6949000" />
       <workItem from="1602034262186" duration="10808000" />
-      <workItem from="1602217996477" duration="2717000" />
+      <workItem from="1602217996477" duration="3909000" />
+      <workItem from="1602397188044" duration="3012000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,11 @@ public class EnemySpawner : MonoBehaviour
 
 
     void Start()
+    {
+        StartCoroutine(RepeatedlySpawnEnemies());
+    }
+
+    private void OnEnable()
     {
         StartCoroutine(RepeatedlySpawnEnemies());
     }

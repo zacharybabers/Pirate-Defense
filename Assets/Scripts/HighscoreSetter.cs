@@ -11,9 +11,5 @@ public class HighscoreSetter : MonoBehaviour
         highScoreText.text = "Highest Wave Reached: " + PlayerPrefs.GetInt("Highscore");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

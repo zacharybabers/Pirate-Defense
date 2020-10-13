@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class GameStateManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private Text waveText;
     [SerializeField] private Text enemiesText;
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private float spawnerEnableTime = 3f;
     public int currentWaveEnemiesLeft = 10;
     void Start()
     {
@@ -21,6 +23,7 @@ public class GameStateManager : MonoBehaviour
         SetInitialSpawnFactor();
         waveText.text = "Wave: " + waveNumber;
         enemiesText.text = "Enemies Left: " + currentWaveEnemiesLeft;
+        StartCoroutine(ActivateSpawners());
     }
 
     
@@ -92,5 +95,29 @@ public class GameStateManager : MonoBehaviour
     public void UpdateEnemiesUI()
     {
         enemiesText.text = "Enemies Left: " + currentWaveEnemiesLeft;
+    }
+
+    IEnumerator ActivateSpawners()
+    {
+        while (true)
+        {
+            foreach (EnemySpawner enemySpawner in allSpawners)
+            {
+                enemySpawner.gameObject.SetActive(true);
+            }
+
+            foreach (var enemySpawner in allSpawners)
+            {
+                int random;
+                random = Random.Range(0, 2);
+                if (random == 1)
+                {
+                    enemySpawner.gameObject.SetActive(false); 
+                }
+            }
+        
+            yield return new WaitForSeconds(spawnerEnableTime);
+        }
+      
     }
 }
